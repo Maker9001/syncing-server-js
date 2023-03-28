@@ -62,7 +62,7 @@ jobs:
       id: get_version
       run: echo ::set-output name=version::${GITHUB_REF/refs\/tags\//}
     - name: Publish to Registry
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: standardnotes/syncing-server-js
         username: ${{ secrets.DOCKER_USERNAME }}
